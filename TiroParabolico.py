@@ -11,8 +11,8 @@ def tap(x, y):
     #if not inside(ball):
     ball.x = -199
     ball.y = -199
-    speed.x = (x + 200) / 15
-    speed.y = (y + 200) / 15
+    speed.x = (x + 200) / 15 #Divisor disminuido en 10 para aumentar la velocidad
+    speed.y = (y + 200) / 15 #Divisor disminuido en 10 para aumentar la velocidad
   
 
 def inside(xy):
@@ -58,10 +58,10 @@ def move():
 
     for target in targets:
         if not inside(target):
-            target.x = 199
+            target.x = 199 #Se cambió el return (que hacía que se terminara el juego) a un valor nuevo en x (parte derecha de la pantalla)
             
 
-    ontimer(move, 10)
+    ontimer(move, 10) #Número disminuido para aumentar el movimiento. 
 
 setup(420, 420, 370, 0)
 hideturtle()
